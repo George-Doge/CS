@@ -1,0 +1,24 @@
+body {
+    background-color: #1b2021;
+    color: white;
+}
+
+div {
+    color: aqua;
+}
+
+.header {
+    color: orange;
+}
+
+.important {
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+#Lorem {
+    border: 2px solid #a6a867;
+    padding: 20px;
+    margin: 20px;
+}

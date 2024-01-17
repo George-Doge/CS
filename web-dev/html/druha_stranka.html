@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stranka: protokoly</title>
+        <meta charset="utf-8">
+        <style>
+            p { color: blue;}
+            table, tr, th {
+                border: 1px solid black; 
+                border-radius: 10px;
+                padding: 30px;
+            }     
+        </style>
+    </head>
+    <body>
+        <h1>The Internet Protocols</h1>
+        <ol type = "A" reversed>
+            <li>TCP - The Transmission Control Protocol</li>
+            <li>UDP - The User Datagram Protocol</li>
+        </ol>
+    <hr>
+        <h2>The Transmission Control Protocol</h2>
+        <p>
+        Once your computer connects to the host server, the server follows transmission control protocol. Devices use TCP when all the requested information needs to be transferred.
+        </p>
+        <ins>For example:</ins>
+        <ul>
+            <li>website</li>
+            <li>picture</li>
+            <li>video</li>
+        </ul>
+    <br>
+        <b><i>Process:</i></b>
+        <ol>
+            <li>the client computer sends request to connect to the server</li>
+            <li>server accepts the request</li>
+            <li>the client requests specific packets</li>
+            <li>the server sends all the requested packets</li>
+            <li>the client checks whether all the requested packets were delivered</li>
+            <li>if they weren't delivered, the client requests those sepcific packets again</li>
+            <li>after all the packets were sent and received, the connection is closed</li>
+        </ol>
+        <h2>The User Datagram Protocol</h2>
+        <p>User datagram protocol is another way to transfer information. It focuses more on speed than on getting every packet to the final destination.
+        This protocol is used when speed is more important tahn getting all the requested information.</p> 
+        For example:
+        <ul type = "square">
+            <li>video conferencing</li>
+            <li>online games</li>
+            <li>media streaming</li>
+        </ul>
+        
+        <q>It is what it is</q>
+        <br>
+        <a href="https://gymes.eu/" target = _blank>GYMES</a>
+        <br>
+        <img src="tcp.jpg" alt="TCP protocol" style="width: 400px; float:right;">
+        <br><br>
+        <h3>12.10. Tables</h3>
+        <table>
+            <tr>
+                <th>TCP</th>
+                <th>UDP</th>
+            </tr>
+            <tr>
+                <th>Creates a connection between two Devices</th>
+                <th>Sends data without a connection</th>
+            </tr>
+            <tr>
+                <th>Breaks data into packets with sequence numbers</th>
+                <th>Doesn't assign sequence numbers</th>
+            </tr>
+            <tr>
+                <th>Sends packets and awaits for acknowledgements</th>
+                <th>Sends packets without waiting for acknowledgement</th>
+            </tr>
+            <tr>
+                <th>Creates a connection between two Devices</th>
+                <th>Sends data without a connection</th>
+            </tr>
+            <tr>
+                <th>Breaks data into packets with sequence numbers</th>
+                <th>Doesn't assign sequence numbers</th>
+            </tr>
+            <tr>
+                <th>Re-sends lost packets to
+                    make sure all data is
+                    received</th>
+                <th>Doesn't re-send lost packets</th>
+            </tr>
+            <tr>
+                <th>Gets data packets in the
+                    correct order</th>
+                <th>Delivers packets as they
+                    arrive, which may be
+                    out-of-order</th>
+            </tr>
+        </table>
+
+      </body>
+</html>

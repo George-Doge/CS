@@ -1,0 +1,18 @@
+body {
+    background-color: orangered;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 {
+    text-align: center;
+}
+
+p{
+    width: 300px;
+}
