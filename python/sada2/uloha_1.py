@@ -18,10 +18,9 @@ def square():
     x = last_click[0]
     y = last_click[1]
 
-    print(x_sqr-a, x_sqr+a)
 
-    # if x_sqr-a>x>x_sqr+a:
-    #     print("Je to v X")
+    if x<x_sqr+a:
+        print("JE TO V X")
 
 
 def score(score):
