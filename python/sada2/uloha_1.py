@@ -8,19 +8,27 @@ canvas.pack()
 score_count = 0
 last_click = (0, 0)
 
-def square():
+def square(score_count):
     x_sqr = random.randint(80, 720)
     y_sqr = random.randint(80, 720)
     a = 80
-    canvas.create_rectangle(x_sqr-a, y_sqr-a, x_sqr+a, y_sqr+a, fill="green")
-
+    # x_sqr = 380
+    # y_sqr = 300
     #check if the square is clicked
     x = last_click[0]
     y = last_click[1]
 
+    print(f"CLICKED:{x}\nSQUARE POS:{x_sqr-a, x_sqr+a}\nSTRED:{x_sqr}")
 
-    if x<x_sqr+a:
-        print("JE TO V X")
+    if x>=x_sqr-a and x<=x_sqr+a and y>=y_sqr-a and y<=y_sqr+a:
+        score_count += 1
+        canvas.delete("all")
+    # else:
+    #     score_count -= 1
+
+    canvas.create_rectangle(x_sqr-a, y_sqr-a, x_sqr+a, y_sqr+a, fill="green")
+
+    return score_count
 
 
 def score(score):
@@ -32,14 +40,13 @@ def clicked(coord):
     cursor_coord = (coord.x, coord.y)
 
     last_click = cursor_coord
-    print(last_click)
      
 
 while True:
 
     canvas.bind("<Button-1>",clicked)
-    
-    square()
+    score_count = square(score_count)
+
 
     score(score_count)
 
