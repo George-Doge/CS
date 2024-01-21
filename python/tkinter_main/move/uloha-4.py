@@ -4,17 +4,11 @@ window = tkinter.Tk()
 canvas = tkinter.Canvas(width=800, height=200, bg="blue")
 canvas.pack()
 
-#declare variables
-movement = False
-
 def cloud():
     x, y = 75, 100
     r = 40
-    if movement and x <= 750:
-        x += 10
+
     canvas.create_oval(x-r-30, y-r, x+r+30, y+r, fill="white", tags="mrak")
-
-
 
 
 def sun():
@@ -24,14 +18,14 @@ def sun():
 
 
 def move(coord):
-    global movement
-    movement = True  
+        canvas.move('mrak', 30, 0)
 
 while True:
 
     canvas.bind("<Button-1>", move)
-    cloud()
     sun()
+    cloud()
+    canvas.after(200)
     canvas.update()
     canvas.delete("all")
 
