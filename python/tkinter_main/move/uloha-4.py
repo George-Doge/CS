@@ -18,15 +18,15 @@ def sun():
 
 
 def move(coord):
-        canvas.move('mrak', 30, 0)
+        for i in range(63):
+            canvas.move('mrak', 10, 0)
+            canvas.after(20)
+            canvas.update()
 
+sun()
+cloud()
 while True:
-
     canvas.bind("<Button-1>", move)
-    sun()
-    cloud()
-    canvas.after(200)
     canvas.update()
-    canvas.delete("all")
 
 window.mainloop()
