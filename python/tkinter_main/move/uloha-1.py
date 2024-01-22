@@ -14,7 +14,17 @@ def auto():
     canvas.create_oval(x-r+50,y-r+40, x+r+50, y+r+40, fill="yellow",tags="auto")
 
 
+def bicycle():
+    pass
+
 
 auto()
+bicycle()
+
+while True:
+    canvas.move("auto", 10, 0)
+    canvas.after(20)
+    canvas.update()
+
 
 window.mainloop()
