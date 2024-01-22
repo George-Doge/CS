@@ -9,24 +9,33 @@ score_count = 0
 last_click = (0, 0)
 
 def square(score_count):
-    # x_sqr = random.randint(80, 720)
-    # y_sqr = random.randint(80, 720)
-    a = 80
-    x_sqr = 380
-    y_sqr = 300
     #check if the square is clicked
+    global x_old
+    global y_old
     x = last_click[0]
     y = last_click[1]
+    a = 80
 
-    print(f"HEADER\nCLICKED:{last_click}\nSQUARE POS:{x_sqr-a, x_sqr+a}\nSTRED:{x_sqr}\nSCORE:{score_count}\n")
+    x_old, y_old = 999, 999
 
-    if x>=x_sqr-a and x<=x_sqr+a and y>=y_sqr-a and y<=y_sqr+a:
+    # print(f"HEADER\nCLICKED:{last_click}\nSQUARE POS:{x_sqr-a, x_sqr+a}\nSTRED:{x_sqr}\nSCORE:{score_count}\n")
+
+    if x>=x_old-a and x<=x_old+a and y>=y_old-a and y<=y_old+a:
         score_count += 1
         canvas.delete("kocka")
     # else:
     #     score_count -= 1
+    x_sqr = random.randint(80, 720)
+    y_sqr = random.randint(80, 720)
+    # x_sqr = 380
+    # y_sqr = 300
+
 
     canvas.create_rectangle(x_sqr-a, y_sqr-a, x_sqr+a, y_sqr+a, fill="green", tags="kocka")
+
+
+    x_old = x_sqr
+    y_old = y_sqr
 
     canvas.after(3000)
     canvas.update()
