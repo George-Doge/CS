@@ -52,13 +52,25 @@ class Ball:
     def fall(self):
         global y_ball, score_count, score_per_sec
         y_ball = self.y
+        point = False
         if self.y <= 800:
             y_ball += 90
         else:
             y_ball = 17
+
+        if self.y >= 710 and  self.y <= 800 and not score_per_sec:
+            score_count += 1
+            score_per_sec = True
+            point = True
+
+        if point:
+            y_ball, self.y = 17, 17
+
         if self.y > 800 and not score_per_sec:
             score_count -= 1
             score_per_sec = True
+
+
 
 
 
