@@ -21,7 +21,9 @@ class Bat:
     def draw(self):
         canvas.create_rectangle(self.coord, fill="blue", tags="bat")
 
-
+    def get_center(self):
+        return self.center
+    
     def move_left(self, coord):
         # canvas.move("bat", -10, 0)
         global x_bat
@@ -49,7 +51,7 @@ class Ball:
         canvas.create_oval(self.coord, fill="orange", tags="ball")
 
 
-    def fall(self):
+    def fall(self, bat_center):
         global y_ball, score_count, score_per_sec
         y_ball = self.y
         point = False
@@ -58,7 +60,7 @@ class Ball:
         else:
             y_ball = 17
 
-        if self.y >= 710 and  self.y <= 800 and not score_per_sec:
+        if bat_center[0]-100 <= self.x <= bat_center[0]+100 and self.y >= bat_center[1] and not score_per_sec:
             score_count += 1
             score_per_sec = True
             point = True
@@ -92,7 +94,8 @@ while True:
 
     bat.draw()
     lopta.draw()
-    lopta.fall()
+    center = bat.get_center()
+    lopta.fall(center)
 
     canvas.bind("<Button-1>", bat.move_left)
 
