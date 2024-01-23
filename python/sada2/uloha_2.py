@@ -1,7 +1,7 @@
 import tkinter, random
 
 window = tkinter.Tk()
-canvas = tkinter.Canvas(width=800, height=800, bg="white")
+canvas = tkinter.Canvas(width=800, height=900, bg="white")
 canvas.pack()
 
 # DECLARE VARIABLES
@@ -39,9 +39,8 @@ class Bat:
 
 
 class Ball:
-    def __init__(self, y_ball):
-        x = 400
-        self.x, self.y = x, y_ball
+    def __init__(self,x_ball, y_ball):
+        self.x, self.y = x_ball, y_ball
         r = 15
         self.center = (self.x, self.y)
         self.coord = (self.center[0]-r, self.center[1]-r, self.center[0]+r, self.center[1]+r)
@@ -52,13 +51,15 @@ class Ball:
 
 
     def fall(self, bat_center):
-        global y_ball, score_count, score_per_sec
+        global y_ball, x_ball, score_count, score_per_sec
         y_ball = self.y
+        x_ball = self.x
         point = False
-        if self.y <= 800:
+        if self.y <= 900:
             y_ball += 90
         else:
             y_ball = 17
+            self.x = int(random.randrange(20, 770, 10))
 
         if bat_center[0]-100 <= self.x <= bat_center[0]+100 and self.y >= bat_center[1] and not score_per_sec:
             score_count += 1
@@ -66,9 +67,10 @@ class Ball:
             point = True
 
         if point:
-            y_ball, self.y = 17, 17
+            y_ball = 17
+            x_ball = int(random.randrange(20, 770, 10))
 
-        if self.y > 800 and not score_per_sec:
+        if self.y > 900 and not score_per_sec:
             score_count -= 1
             score_per_sec = True
 
@@ -78,6 +80,7 @@ class Ball:
 
 #define variables
 x_bat = 400
+x_ball = 400
 y_ball = 17
 score_count = 0
 score_per_sec = False
@@ -89,7 +92,7 @@ while True:
         frames = 1
         score_per_sec = False
     if frames == 1:
-        lopta = Ball(y_ball)
+        lopta = Ball(x_ball, y_ball)
         bat = Bat(x_bat)
 
     bat.draw()
