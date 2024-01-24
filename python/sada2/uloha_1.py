@@ -8,20 +8,20 @@ canvas.pack()
 score_count = 0
 last_click = (0, 0)
 
-def square(score_count):
+def square():
     #check if the square is clicked
+    canvas.delete("all")
     global x_old
     global y_old
     x = last_click[0]
     y = last_click[1]
     a = 80
-
     x_old, y_old = 999, 999
 
     # print(f"HEADER\nCLICKED:{last_click}\nSQUARE POS:{x_sqr-a, x_sqr+a}\nSTRED:{x_sqr}\nSCORE:{score_count}\n")
 
     if x>=x_old-a and x<=x_old+a and y>=y_old-a and y<=y_old+a:
-        score_count += 1
+        # score_count += 1
         canvas.delete("kocka")
     # else:
     #     score_count -= 1
@@ -37,11 +37,10 @@ def square(score_count):
     x_old = x_sqr
     y_old = y_sqr
 
-    canvas.after(3000)
+    # canvas.delete("kocka")
+    canvas.after(1000, square)
     canvas.update()
-    canvas.delete("kocka")
 
-    return score_count
 
 
 def score(score):
@@ -55,14 +54,13 @@ def clicked(coord):
     last_click = cursor_coord
      
 
-while True:
 
-    score(score_count)
+score(score_count)
 
-    canvas.bind("<Button-1>",clicked)
+canvas.bind("<Button-1>",clicked)
 
-    score_count = square(score_count)
+square()
 
-    canvas.delete("zobrazovac")
+canvas.delete("zobrazovac")
 
 window.mainloop()
