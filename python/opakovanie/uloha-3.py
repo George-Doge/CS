@@ -1,25 +1,40 @@
-print("Na odidenie z programu stlacte Ctrl + C")
-while True:
+import tkinter
+import random
 
+window = tkinter.Tk()
+canvas = tkinter.Canvas(width=800, height=800, bg="white")
+canvas.pack()
+
+
+while True:
     letter = input("Stlac klavesu: ")
+    text = ""
+    canvas.delete("all")
+
+    x = random.randint(40, 780)
+    y = random.randint(40, 760)
 
     if letter.lower() == "a":
-        print("A-Ahoj!")
+        text = "A-Ahoj!"
 
     elif letter.lower() == "c":
-        print("C-Cau!")
+        text = "C-Cau!"
 
     elif letter.lower() == "d":
-        print("D-Dobry den!")
+        text = "D-Dobry den!"
 
     elif letter.lower() == "n":
-        print("N-Nazdar!")
+        text = "N-Nazdar!"
 
     elif letter.lower() == "s":
-        print("S-Servus!")
+        text = "S-Servus!"
 
     elif letter.lower() == "z":
-        print("Z-Zdravim!")
+        text = "Z-Zdravim!"
 
     else:
-        print(f"Pismeno {letter} nemam v zozname.")
+        text = f"{letter} nemam v zozname."
+
+    canvas.create_text(x, y, text=text, font="Arial 40")
+
+window.mainloop()
