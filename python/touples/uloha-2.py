@@ -7,6 +7,6 @@ def kruh(r):
     return odpoved
 
 while True:
-    priemer = float(input("Zadaajte polomer kruhu v cm: "))
+    priemer = float(input("Zadajte polomer kruhu v cm: "))
     odpoved = kruh(priemer)
     print(f"Obvod je {round(odpoved[0], 2)} cm.\nObsah je {round(odpoved[1], 2)}cm^2.")
