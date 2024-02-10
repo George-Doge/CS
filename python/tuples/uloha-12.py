@@ -1,6 +1,7 @@
-def rozloz(tuple):
+def rozloz(input_tuple):
     new_tuple = ()
-    for item in tuple:
+    for item in input_tuple:
+        print(type(item))
         if type(item) == tuple:
             for item2 in item:
                 new_tuple += (item2,)
