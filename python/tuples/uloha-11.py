@@ -1,10 +1,10 @@
-def replace(touple, index, new_item):
-    if index > len(touple)-1:
+def replace(tuple, index, new_item):
+    if index > len(tuple)-1:
         print("Can't replace an item on position out of range.")
         breakpoint
 
     odpoved = ()
-    for i, item in enumerate(touple):
+    for i, item in enumerate(tuple):
         if i != index:
             odpoved += (item,)
 
@@ -14,8 +14,8 @@ def replace(touple, index, new_item):
     return odpoved
 
 
-touple = (1, "2", 3, "ananas", 5)
+tuple = (1, "2", 3, "ananas", 5)
 
-odpoved = replace(touple, 4, "aaaaaa")
+odpoved = replace(tuple, 4, "banan")
 
 print(odpoved)
