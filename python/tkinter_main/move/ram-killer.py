@@ -1,3 +1,5 @@
+'''
+# I have commented this out, bcs it is not good to run it. If you happen to run it, then stop it with Ctrl+C in console
 import tkinter
 
 window = tkinter.Tk()
@@ -37,3 +39,4 @@ while True:
     canvas.update()
 
 window.mainloop()
+'''
