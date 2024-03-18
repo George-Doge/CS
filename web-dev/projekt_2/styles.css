@@ -1,0 +1,71 @@
+/* General style rules */
+
+body {
+    color: white;
+    background-color: black;
+}
+
+h2 {
+    padding: 20px;
+}
+
+.hyperlink {
+    color: lightblue;
+}
+
+.hyperlink:visited {
+    color: blue;
+}
+
+.hyperlink:hover {
+    color: aliceblue;
+}
+
+/* Contact page */
+
+#contactContainer {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin: 10px;
+}
+
+#contactFormular {
+    width: 70%;
+}
+
+.form-text {
+    color: rgb(141, 141, 141);
+}
+
+.mandatoryField {
+    color: red;
+}
+
+/* About me page */
+#aboutMeBody {
+    text-align: justify;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#aboutMeParagraph {
+    margin: 20px;
+    width: 30vw;
+}
+
+#meImageText {
+    justify-self: end;
+    margin: 25px;
+}
+
+#meImage {
+    width: 10vw;
+    border-radius: 20px;
+}
+
+#stickmanText {
+    font-size: 10px;
+}
