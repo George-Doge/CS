@@ -12,7 +12,7 @@ Find a topic...
 - [ ] Footer – s optimálnym formátovaním a s podpisom autora + informáciami o autorských právach (STRÁNKU NIKAM NA INTERNET NEZVEREJŇUJTE)
 - [ ] CSS triedy, CSS ID, Bootstrap
 - [ ] Formátovanie textu- niekoľko úrovní nadpisov....
-- [ ] Formátovanie pozadia
+- [X] Formátovanie pozadia
 - [ ] Element `<meta>` s údajmi o autorovi a kľúčových slovách
 - [X] Zoznam – usporiadaný alebo neusporiadaný
-- [ ] Pripojený reset.css a bootstrap
+- [X] Pripojený reset.css a bootstrap

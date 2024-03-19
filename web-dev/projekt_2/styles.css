@@ -2,7 +2,9 @@
 
 body {
     color: white;
-    background-color: black;
+    background-color: rgb(40, 40, 40);
+    font-size: 19px;
+    overflow-y: hidden;
 }
 
 h2 {
@@ -21,6 +23,67 @@ h2 {
     color: aliceblue;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+/* Idex page */
+
+#indexContainer {
+    margin: 30px;
+}
+
+#indexHeader {
+    text-align: center;
+}
+
+/* Gallery page */
+
+#galleryHeader {
+    margin: 30px;
+    text-align: center;
+}
+
+#galleryContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin: 30px;
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.galleryImage {
+    width: 100%;
+    padding: 2%;
+}
+
+.galleryImage:hover {
+    display: flex;
+    transition: all 0.5s;
+    transform: scale(1.05);
+
+}
+
 /* Contact page */
 
 #contactContainer {
@@ -28,7 +91,7 @@ h2 {
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    margin: 10px;
+    margin: 30px;
 }
 
 #contactFormular {
@@ -49,6 +112,7 @@ h2 {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
+    margin: 30px;
 }
 
 #aboutMeParagraph {
@@ -64,6 +128,12 @@ h2 {
 #meImage {
     width: 10vw;
     border-radius: 20px;
+}
+
+#meImage:hover {
+    display: flex;
+    transition: all 1.5s;
+    transform: rotate(360deg);
 }
 
 #stickmanText {
