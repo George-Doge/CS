@@ -2,10 +2,10 @@
 Topic: something about games
 ## TODO
 - [ ] Aspoň 3 podstránky (hlavná stránka, galéria, o mne, kontakt...)
-- - [ ] Main page
-- - [ ] Galériu s aspoň 5 obrázkami- minimálne 2 riadky, minimálne 2 stĺpce
-- - [X] Contact
-- - [X] About me
+  - [ ] Main page
+  - [ ] Galériu s aspoň 5 obrázkami- minimálne 2 riadky, minimálne 2 stĺpce
+  - [X] Contact
+  - [X] About me
 - [X] Menu- vertikálne alebo horizontálne – na všetkých podstránkach rovnaké a funkčné
 - [ ] 1 z obrázkov na hlavnej stránke bude odkazovať na stránku školy
 - [X] Tabuľku – minimálne 3 riadky, minimálne 2 stĺpce
