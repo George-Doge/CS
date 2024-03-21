@@ -128,6 +128,14 @@ footer {
     background-color: #00A97F;
 }
 
+#indexImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+    height: 20vw;
+}
+
 /* Gallery page */
 
 #galleryBody {
@@ -141,25 +149,25 @@ footer {
 
 #galleryContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 30px;
     margin: 30px;
-    height: 65vh; 
+    height: 72vh; 
     overflow-y: auto;
     overflow-x: hidden;
 }
 
 .galleryImage {
     width: 100%;
+    height: 100%;
     padding: 2%;
 }
 
 .galleryImage:hover {
     display: flex;
     transition: all 0.5s;
-    transform: scale(1.05);
-
+    transform: scale(1.1);
 }
 
 /* Contact page */
@@ -225,3 +233,7 @@ footer {
 #stickmanText {
     font-size: 10px;
 }
+
+/* Colour pallete
+
+https://mycolor.space/?hex=%23282828&sub=1 */
