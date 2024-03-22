@@ -1,10 +1,16 @@
 /* General style rules */
 
+html {
+    min-height: 100vh;
+    position: relative;
+}
+
 body {
     color: white;
     background-color: rgb(40, 40, 40);
     font-size: 19px;
-    overflow-x: hidden;
+    overflow: auto;
+    margin-bottom: 50px; /* Footer height */
 }
 
 h1, h2 {
@@ -50,17 +56,14 @@ p {
 footer {
     background-color: #3E3C4B;
     font-size: small;
-    padding: 10px;
-    height: 40px;
-    width: 100vw;
-    bottom: 00;
-    left: 0;
     position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
 }
 
-#indexFooter {
-    position: relative;
-}
+/* https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b */
 
 /* Index page */
 
@@ -118,7 +121,7 @@ footer {
 .indexGameTableItem {
     border: 3px solid black;
     padding: 10px;
-    /* height: 80px; */
+    height: 80px;
 }
 
 .indexGameTableHeader {
@@ -172,12 +175,16 @@ footer {
 
 /* Contact page */
 
+#contactHeader {
+    text-align: center;
+}
+
 #contactContainer {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    margin: 30px;
+    margin: 20px;
 }
 
 #contactFormular {
@@ -197,7 +204,8 @@ footer {
 }
 
 /* About me page */
-#aboutMeBody {
+
+#aboutMeContainer {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
@@ -210,7 +218,6 @@ footer {
     border-style: solid;
     border-radius: 25px;
     padding: 10px;
-    /* background-color: rgb(131, 131, 131); */
     background-color: #3E3C4B;
 }
 

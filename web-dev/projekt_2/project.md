@@ -1,15 +1,15 @@
 # Project 2
 Topic: something about games
 ## TODO
-- [ ] Aspoň 3 podstránky (hlavná stránka, galéria, o mne, kontakt...)
-  - [ ] Main page
+- [X] Aspoň 3 podstránky (hlavná stránka, galéria, o mne, kontakt...)
+  - [X] Main page
   - [X] Galériu s aspoň 5 obrázkami- minimálne 2 riadky, minimálne 2 stĺpce
   - [X] Contact
   - [X] About me
 - [X] Menu- vertikálne alebo horizontálne – na všetkých podstránkach rovnaké a funkčné
 - [X] 1 z obrázkov na hlavnej stránke bude odkazovať na stránku školy
 - [X] Tabuľku – minimálne 3 riadky, minimálne 2 stĺpce
-- [ ] Footer – s optimálnym formátovaním a s podpisom autora + informáciami o autorských právach (STRÁNKU NIKAM NA INTERNET NEZVEREJŇUJTE)
+- [X] Footer – s optimálnym formátovaním a s podpisom autora + informáciami o autorských právach (STRÁNKU NIKAM NA INTERNET NEZVEREJŇUJTE)
 - [X] CSS triedy, CSS ID, Bootstrap
 - [X] Formátovanie textu- niekoľko úrovní nadpisov....
 - [X] Formátovanie pozadia
