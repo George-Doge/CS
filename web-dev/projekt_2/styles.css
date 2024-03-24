@@ -63,6 +63,10 @@ footer {
     height: 35px;
 }
 
+.navbar-brand {
+    margin: 0px;
+}
+
 /* https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b */
 
 /* Index page */
@@ -107,8 +111,7 @@ footer {
     margin-left: 7%;
     border-collapse: collapse;
     background-color: #C4C4C4;
-    width: 80%;
-    height: 80%;
+    height: 10vh;
     text-align: center;
 }
 
