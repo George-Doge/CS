@@ -12,7 +12,7 @@ slovnik = {
 }
 
 def find_value(dict, key):
-    return dict.get(key)
+    return dict.get(key, "Slovo sa nenachadza")
 
 
 
