@@ -1,15 +1,12 @@
 let databaza = [{
     username:"Matej",
     passwd:"heslo",
-    age:true
 },{
-    username:"Patrik",
-    passwd: "realneTazkeHeslo",
-    age: false
+    username:"Heslo",
+    passwd: "patrik",
 },{
     username:"Maros",
     passwd:"Snina",
-    age:true
 }]
 
 
@@ -18,12 +15,12 @@ let passwdInput = prompt("Zadaj heslo: ");
 
 
 function validUser(meno, heslo, databaza){
-    for (var i = 0; i < databaza.length; i++) {
+    for (let i = 0; i < databaza.length; i++) {
         if(meno === databaza[i].username && heslo === databaza[i].passwd) {
             return true;
         }
     }
     return false;
 }
-    
+
 console.log(validUser(userNameInput, passwdInput, databaza));
