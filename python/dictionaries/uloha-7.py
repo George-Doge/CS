@@ -2,7 +2,7 @@ from random import randint
 
 def dve_kocky(n):
 
-    count_multiplications = {
+    count_addition = {
         "2":0,
         "3":0,
         "4":0,
@@ -22,9 +22,9 @@ def dve_kocky(n):
 
         sum = first_roll+second_roll
 
-        count_multiplications[str(sum)] += 1
+        count_addition[str(sum)] += 1
 
-    return count_multiplications
+    return count_addition
 
 
 number_rolls = int(input("Enter number of rolls you want the script to take: "))

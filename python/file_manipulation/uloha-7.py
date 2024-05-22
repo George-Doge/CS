@@ -1,5 +1,5 @@
 data = {}
-with open("python/file_manipulation/names.txt", "r") as file:
+with open("names.txt", "r") as file:
     information = file.read().splitlines()
 
     pocet_riadkov = len(information)
