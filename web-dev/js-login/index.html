@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        #prihlasovanie {
+            display: flex;
+            flex-direction: column;
+            width: 8vw;
+        }
+
+        #enter {
+            width: 50%;
+        }
+
+        #prihlasovanieDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="prihlasovanieDiv">
+        <form id="prihlasovanie">
+            <label>Prihlasovacie meno</label>
+            <input type="text" id="loginMeno" placeholder="John Doe">
+            <label>Heslo</label>
+            <input type="password" id="loginHeslo" placeholder="****">
+            <button type="button" id="enter">Odoslať</button>
+        </form>
+        <p id="sprava"></p>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
