@@ -5,7 +5,7 @@ GER = "Hallo"
 ESP = "Hola"
 
 print("ENG, SVK, GER, ESP")
-pozdrav = input("Vyber si akym jazykom chces byt pozdreveny: ")
+pozdrav = input("Vyber si akym jazykom chces byt pozdraveny: ")
 
 if pozdrav.upper() == "ENG":
     print(ENG)

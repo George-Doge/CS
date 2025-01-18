@@ -19,9 +19,9 @@ pocet_sportovcov = len(sportovci_dict)
 najrychlejsi = min(sportovci_dict, key=sportovci_dict.get)
 najrychlejsi_cas = int(sportovci_dict.get(najrychlejsi))
 
-for i in range(1, najrychlejsi_cas):
+for i in range(najrychlejsi_cas):
     minuty = najrychlejsi_cas // 60
     sekundy = najrychlejsi_cas - minuty*60
 
 
-print(f"Pocet zucasdtnenych: {pocet_sportovcov}\n{najrychlejsi}\t{minuty} min. {sekundy} s")
+print(f"Pocet zucastnenych: {pocet_sportovcov}\n{najrychlejsi}\t{minuty} min. {sekundy} s")

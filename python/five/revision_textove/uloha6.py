@@ -40,6 +40,7 @@ def premen_cas(vstup):
 
     cisla_dict[vstup]= cas_premeneny
 
+
 with open("telefon.txt", "r") as file:
     data = file.read()
     data = data.split("\n")
@@ -54,11 +55,9 @@ premen_dict(cisla_zoznam)
 
 # a toto to premeni na minuty a sekundy
 for key in cisla_dict.keys():
-    novy_cas = premen_cas(key)
-
-print(cisla_dict)
+    premen_cas(key)
 
 # tu to printne
-print("PRehlad podla volaneho cisla")
+print("Prehlad podla volaneho cisla")
 for key, value in cisla_dict.items():
     print(f"{key} {value[0]}:{value[1]}")

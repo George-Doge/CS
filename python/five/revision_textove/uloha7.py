@@ -17,4 +17,4 @@ vysledky = dict(sorted(vysledky.items(), key=lambda item: item[1], reverse=True)
 
 print("Konecne umiestnenie v slalome:")
 for position, (key, value) in enumerate(vysledky.items()):
-    print(f"{position}. miesto {key} {value} bodov")
+    print(f"{position + 1}. miesto {key} {value} bodov")

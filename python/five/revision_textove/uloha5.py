@@ -17,7 +17,8 @@ mesiacos = {
 }
 
 def read_date(person):
-    split_person = person.split(" ")
+    split_person = person.split()
+    print(split_person)
 
     number = split_person[0]
 
@@ -35,5 +36,6 @@ def read_date(person):
 with open("datumy.txt", "r") as file:
     data = file.readlines()
 
+print("Dievčatá:")
 for line in data:
     read_date(line)
