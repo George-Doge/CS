@@ -4,25 +4,24 @@ import tkinter as tk
 
 root = tk.Tk()
 root.title("Turistika")
-root.geometry("350x500")
+# root.geometry("350x500")
 
 def trasa_func():
     canvas.delete("all")
     vysky = vysky_entry.get().split(", ")
     dlzka = len(vysky)
-    print(vysky, dlzka)
 
-    sirka_o = root.winfo_width()
-    vyska_o = root.winfo_height()
+    # print(vysky, dlzka)
 
-    max_vyska = int(max(vysky))
-    min_vyska = int(min(vysky))
+    x = 10
+    for i in range(dlzka - 1):
+        x1 = x
+        y1 = 300 - int(vysky[i]) // 10
+        x2 = x + 50
+        y2 = 300 - int(vysky[i+1]) // 10
 
-    step_x = sirka_o/(dlzka-1)
-    step_y = vyska_o/(max_vyska - min_vyska)
-
-    for i in range(dlzka):
-        canvas.create_line(i*step_x, int(vysky[i]), (i+1)*step_x, int(vysky[i + 1]), fill="blue", width="5")
+        canvas.create_line(x1, y1, x2, y2, fill="blue", width="2")
+        x += 50
 
 
 nadpis = tk.Label(root, text="Zadaj nadmorske vysky oddelene ciarkou:")
