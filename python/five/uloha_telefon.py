@@ -1,5 +1,3 @@
-# domaca uloha 1
-# files: telefon.txt
 dict_cisla = {}
 
 with open("telefon.txt", "r", encoding="utf-8") as file:
@@ -15,8 +13,8 @@ for line in data:
 
 # premena sekund na minuty
 for key, value in dict_cisla.items():
-    minuty = value // 60
-    sekundy = value - minuty * 60
+    minuty: int = value // 60
+    sekundy: int = value - minuty * 60
 
     dict_cisla[key] = (minuty, sekundy)
 
