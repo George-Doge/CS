@@ -20,7 +20,7 @@ for key, value in dict_cisla.items():
 
     dict_cisla[key] = (minuty, sekundy)
 
-# vystlaci vysledok
+# vytlaci vysledok
 print("Prehlad podla volaneho cisla")
 for key, value in dict_cisla.items():
     print(f"{key}\t{value[0]}:{value[1]}")
